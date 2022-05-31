@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300&display=swap');
+
+
+:root {
+    --white: #f7f7f7;
+    --blueColor: #6186ff;
+    --black: #000000;
+    --darkBlue: #001A66;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0.75rem 0;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(0.25turn, #001A66, #0029a4, #275dff, #638aff,#f7f7f7);
+    margin: 0;
+    padding: 0.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+
+nav > h1 {
+    margin-left: 10rem;
+}
+
+nav > ul {
+    margin-right: 10rem;
+}
+
+nav #logo {
+    color: var(--blueColor);
+    font-size: 1.5em;
+}
+
+nav #logo span {
+    color: var(--white);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul a {
+    color: var(--darkBlue);
+    font-weight: 600;
+    margin: 0 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul a:hover {
+    /* border-bottom: 3px solid var(--darkBlue); */
+    background: var(--darkBlue);
+    color: var(--white);
+}
+
+/* Main */
+main {
+    height: 93.5vh;
+    background: var(--darkBlue);
+}
+
+.showcase {
+    display:table;
+    height: 30%;
+    width: 100%;
+    background: var(--darkBlue);
+    color: var(--white);
+    text-align: center;
+
+}
+
+.showcase h1 {
+    top:35%;
+    left: 30%;
+    font-size: 8em;
+    margin: auto 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.showcase h1 i{
+    margin-left: 2.5rem;
+    color: var(--blueColor);
+}
+
+.managers {
+    display: flex;
+    height: 70%;
+    background: var(--darkBlue);
+}
+
+.managers div {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: table;
+}
+
+.managers div i {
+    display: block;
+    font-size: 3em;
+}
+
+.managers div a {
+    font-size: 4em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#task-manager {
+    background: #00103d;
+    margin: 0 0.5rem 0 1rem;
+}
+
+#task-manager a {
+    width: 100%;
+    height: 100%;
+    color: var(--blueColor);
+    transition: all 0.2s ease-in-out;
+}
+
+#task-manager a:hover {
+    color: var(--white);
+    background: #00154d;
+}
+
+#budget-manager {
+    background: #00103d;
+    margin: 0 1rem 0 0.5rem;
+}
+
+#budget-manager a {
+    color: var(--blueColor);
+    transition: all 0.2s ease-in-out;
+}
+
+#budget-manager a:hover {
+    color: var(--white);
+    background: #00154d;
+}
+
+/* Footer */
+footer {
+    background: var(--darkBlue);
+    padding: 1rem 1rem 0 1rem;
+}
+
+#footer-content {
+    display: grid;
+    grid-template-areas: 
+    'su am au sm'
+    'cr cr cr cr';
+    height: 100%;
+    background: #00103d;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    grid-gap: 2rem;
+    grid-template-columns: 2fr repeat(3, 1fr);
+}
+
+#footer-content ul {
+    list-style: none;
+}
+
+#footer-content div {
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+#footer-content a {
+    color: var(--blueColor);
+    font-size: 1.1rem;
+}
+
+#footer-content a:hover {
+    text-decoration: underline;
+}
+
+#sign-up {
+    grid-area: su;
+    padding-right: 5rem;
+}
+#sign-up input {
+    width: 13rem;
+    height: 1.5rem;
+    font-size: 0.7em;
+}
+#sign-up p {
+    font-size: 1rem;
+}
+#sign-up a {
+    background: var(--blueColor);
+    color: var(--darkBlue);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+#sign-up a:hover {
+    text-decoration: none;
+    color: var(--white);
+}
+
+#account-menu {
+    grid-area: am;
+}
+
+#about-us {
+    grid-area: au;
+}
+
+#social-media {
+    grid-area: sm;
+}
+#social-media i {
+    margin-right: 0.3rem;
+}
+
+#copyright {
+    grid-area: cr;
+    text-align: center;
+}
+#copyright h5 {
+    font-size: 1rem;
+}
